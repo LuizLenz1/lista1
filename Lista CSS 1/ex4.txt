@@ -1,0 +1,26 @@
+O css pode ser incluido de 3 maneiras principais:
+
+CSS Externo
+Descrição: O CSS externo é armazenado em um arquivo separado com extensão .css, e é referenciado no documento HTML através de uma tag <link>. 
+Como usar: No <head> do HTML, add uma linha para importar o arquivo CSS.
+
+<link rel="stylesheet" href="estilos.css">
+
+2. CSS Interno
+Descrição: CSS interno é definido diretamente no documento HTML dentro de uma tag <style> no <head>. 
+Como usar: Coloca-se o CSS dentro da tag <style> no <head>.
+
+<style>
+   body {
+      background-color: lightblue;
+   }
+   p {
+      color: darkblue;
+   }
+</style>
+
+3. CSS Inline
+Descrição: CSS inline é aplicado diretamente ao elemento HTML usando o atributo style. .
+Como usar: O estilo é adicionado no próprio elemento HTML.
+
+<p style="color: darkblue; font-size: 18px;">Texto estilizado</p>

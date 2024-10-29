@@ -1,0 +1,20 @@
+Seletor como o nome indica, seleciona qual elemento ou elementos do HTML serão estilizados.
+Sobre os tipos, existem varioes e eles seguem uma certa herarquia crescente: 
+
+1- Seletores de Tipo (como p, h1, div, li): Aplicam-se a todos os elementos de um tipo específico. Esses seletores têm a menor especificidade e são facilmente substituídos por outros mais específicos. Exemplo: p { color: red; }.
+
+2- Seletores de Classe (como .botao, .ativo): Aplicam estilos a todos os elementos com uma determinada classe. A especificidade dos seletores de classe é maior que a dos seletores de tipo, então eles prevalecem quando entram em conflito com regras de tipo. Exemplo: .botao { color: blue; }.
+
+3- Seletores de Atributo (como [type="text"], [draggable="true"]): Aplicam-se a elementos que possuem um atributo específico. Eles têm uma especificidade igual à dos seletores de classe. Exemplo: [type="checkbox"] { color: green; }.
+
+4- Seletores de ID (como #menu, #logo): Aplicam-se a elementos com um ID específico e têm uma especificidade muito alta, superando seletores de tipo, classe e atributo. Exemplo: #menu { color: purple; }.
+
+5- Seletores Combinados:
+
+Seletores Adjuntos (.classe1 + .classe2): Aplicam estilos ao primeiro elemento que segue um outro específico. Esses seletores são um pouco mais específicos que seletores de classe simples.
+Seletores de Filho Direto (div > p): Aplicam-se apenas ao filho direto de um elemento. Sua especificidade depende dos seletores usados, mas a estrutura combinada aumenta o valor.
+Seletores Complexos: Ao combinar classes, IDs e atributos, como .classe#id[attr="valor"], o nível de especificidade aumenta, pois todos esses seletores estão sendo considerados juntos.
+
+6-Seletores Inline: Regras CSS aplicadas diretamente ao elemento usando o atributo style. Elas têm especificidade mais alta do que qualquer seletor no CSS externo, então prevalecem sobre todas as regras de estilo, exceto as importantes.
+
+7- Uso de !important: Essa regra especial aumenta a prioridade da propriedade, tornando-a mais forte que outras, mesmo que venham de seletores mais específicos. Deve ser usada com cautela, pois pode tornar o CSS difícil de manter.

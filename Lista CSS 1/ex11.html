@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <title>Interface de Chat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #35355f;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            padding: 15px;
+        }
+
+
+        .chat-wrapper {
+            background-color: #272737;
+            padding: 12px;
+            border-radius: 8px;
+            max-width: 320px;
+            width: 100%;
+        }
+
+        .message {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        .message-text {
+            background-color: #c8c8c8;
+            color: #121212;
+            padding: 8px;
+            border-radius: 8px;
+            max-width: 80%;
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .message-text img {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .message-time {
+            font-size: 0.75rem;
+            color: #999;
+            position: absolute;
+            bottom: -14px;
+            right: 4px;
+        }
+
+
+        .response {
+            background-color: #ffbb33;
+            color: #000;
+            padding: 8px;
+            border-radius: 8px;
+            max-width: 80%;
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            margin-left: auto;
+            text-align: right;
+        }
+
+        .response img {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            margin-left: 8px;
+        }
+
+        .response-time {
+            font-size: 0.75rem;
+            color: #ddd;
+            position: absolute;
+            bottom: -14px;
+            left: 4px;
+        }
+
+        .input-area {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .input-area input[type="text"] {
+            width: 78%;
+            padding: 8px;
+            border-radius: 4px;
+            border: none;
+            outline: none;
+        }
+
+        .input-area input[type="submit"] {
+            width: 20%;
+            background-color: #ffbb33;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+            font-weight: bold;
+        }
+
+        .input-area input[type="submit"]:hover {
+            background-color: #1e1e2f;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-wrapper">
+        <div class="message">
+            <div class="message-text">
+                <img src="/img/images.jpeg" alt="Avatar Feminino"> Olá, tudo bem?
+                <span class="message-time">00:50</span>
+            </div>
+        </div>
+
+        <div class="message">
+            <div class="response">
+                Estou bem sim, e você?
+                <img src="/img/male_man_people_person_avatar_white_tone_icon_159363.webp" alt="Avatar Masculino">
+                <span class="response-time">00:55</span>
+            </div>
+        </div>
+
+        <div class="message">
+            <div class="message-text">
+                <img src="/img/images.jpeg" alt="Avatar Feminino"> Vamos sair hoje? Sabe, conversar e Lorem ipsum dolor sit amet...
+                <span class="message-time">01:01</span>
+            </div>
+        </div>
+
+        <div class="message">
+            <div class="response">
+                Criatura...
+                <img src="/img/male_man_people_person_avatar_white_tone_icon_159363.webp" alt="Avatar Masculino">
+                <span class="response-time">01:03</span>
+            </div>
+        </div>
+
+        <div class="input-area">
+            <input type="text" placeholder="Digite sua mensagem">
+            <input type="submit" value="Enviar">
+        </div>
+    </div>
+</body>
+</html>

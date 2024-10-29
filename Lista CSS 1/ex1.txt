@@ -1,0 +1,15 @@
+Uma regra Css é basicamente uma declaração que permite estilizar elementos do HTML
+Um exemplo: 
+
+
+p {
+     color: red;
+}
+
+Ou seja: 
+
+
+seletor {
+
+    propriedade: elemento;
+}

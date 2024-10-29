@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>   
+   <title>Exemplo especificidade de seletores</title>
+   <style>
+      /*regra 1*/ li{color:red;}
+      /*regra 2*/ .churras{color:green;}
+      /*regra 3*/ .fruta{color:gray}
+      /*regra 4*/ li+li.churras{color: black;}
+      /*regra 5*/ .churras[draggable="true"]{color: magenta;}
+      /*regra 6*/ #lip1,#lip2,#lip3{color:blue}
+      /*regra 7*/ #lip3.fruta{color:orange}
+      /*regra 8*/ ol>li.churras#lip5{color:purple}
+
+        div ol>li { color:rgb(0, 0, 0);}
+   </style>
+</head>
+<body>   
+   <ol>
+   <!--item 1--> <li id="lip0">Abacaxi</li>
+   <!--item 2--> <li           class="fruta">Melão</li>
+   <!--item 3--> <li id="lip2" class="fruta">Pera</li>
+   <!--item 4--> <li id="lip3" class="fruta">Uva</li>
+   <!--item 5--> <li id="lip4" class="fruta">Maçã</li>
+   <!--item 6--> <li           class="churras">Carne</li>
+   <!--item 7--> <li           class="churras">Linguiça</li>
+   <!--item 8--> <li id="lip7" class="churras" draggable="true">Pão de alho</li>
+   </ol>
+   <div class="Resposta"> 
+   <ol>
+      <li>O primeiro elemento fica vermelho pois pertence apenas a regra 1</li>  
+      <li>O segundo cinza já que só tem a classe fruta logo regra 3</li> 
+      <li>O terceiro segue a regra 6 pois é mais especifica que a 1, logo azul</li> 
+      <li>O quarto segue a regra 7 já que são seletores combinasdos (id + classe), logo laranja /li> 
+      <li>O quinto é cinza, regra 3</li> 
+      <li>O sexto é preto, pois vem depois de um li e pertence a classe churras</li> 
+      <li>O setimo é preto tambem, pelo mesmo motivo </li> 
+      <li>O oitavo é magenta ja que segue a regra 5 (classe + atributo)</li> 
+   </ol>
+</div>
+
+</body>
+</html>
+
